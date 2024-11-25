@@ -1,10 +1,10 @@
 import requests
 
-url = "http://localhost:3000/"
+url = "http://localhost:3000"
 r = requests.get(url)
 print("[TEST] GET / =>", r.status_code)
 
-r = requests.post(url+"/api/users", data={"user": "admin", "password": "admin"})
+r = requests.post(url+"/api/users", data={"user": "admin2", "password": "admin"})
 print("[TEST] POST /api/users =>", r.status_code)
 
 r = requests.get(url+"/api/users")
