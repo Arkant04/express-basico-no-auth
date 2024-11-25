@@ -29,9 +29,9 @@ router.get('/users/:user', (req, res) => {
 
 router.put('/users/:user', (req, res) => {
     const user = req.params.user;
-    const password = req.body.password;
+    const new_password = req.body.password;
     try {
-        updateUser(user, password);
+        updateUser(user,new_password);
         res.status(200).send('Usuario actualizado');
     } catch (err) {
         res.status(500).send('Error al actualizar el usuario');
